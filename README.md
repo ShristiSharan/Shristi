@@ -1,4 +1,5 @@
-# Portfolio Website
+# Shris's Portfolio- Portfolio Website-
+
 
 This is a portfolio website built with Next.js and Tailwind CSS. It showcases About Me, TechStack, Expertise, Experiences and Extra's- Roles & Achievements in an elegant and responsive design {Formal yet Bright}
 
@@ -12,11 +13,6 @@ This is a portfolio website built with Next.js and Tailwind CSS. It showcases Ab
 1. Start the development server: `npm run dev`
 2. Open your browser and visit `http://localhost:3000` to view the website.
 
-# Shris's Portfolio
-
-<p align="center">
-  <img src="https://your-portfolio-image-url.png" alt="ShrisROBO's Portfolio" width="300" />
-</p>
 
 ## Overview
 

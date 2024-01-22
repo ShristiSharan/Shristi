@@ -5,7 +5,7 @@ import { ImPointRight } from "react-icons/im";
 
 function AboutCard() {
   return (
-    <Container className="d-flex justify-content-center align-items-center" style={{ minHeight: "70vh" }}>
+    <Container className="d-flex justify-content-center align-items-center" style={{ minHeight: "40vh" }}>
     <Card className="quote-card-view text-center">
       <Card.Body>
         <blockquote className="blockquote mb-0">

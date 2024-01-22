@@ -11,14 +11,14 @@ const projectsData = [
     description: "Portfolio website with AI customchatbot",
     image: "/images/projects/1.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "/https://github.com/ShristiSharan/Shristi",
+    previewUrl: "/https://shristi-gamma.vercel.app/",
   },
   {
     id: 2,
     title: "Chatbot in JS",
     description: "Smart personalized bot",
-    image: "/images/projects/2.png",
+    image: "/images/projects/2.jpg",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/ShristiSharan/chatbot-with-js-main",
     previewUrl: "/",
@@ -39,7 +39,7 @@ const projectsData = [
     image: "/images/projects/4.png",
     tag: ["All", "Mobile"],
     gitUrl: "https://github.com/ShristiSharan/Todo_app",
-    previewUrl: "/",
+    previewUrl: "/https://dapper-haupia-791912.netlify.app/",
   },
   {
     id: 5,
@@ -82,7 +82,7 @@ const ProjectsSection = () => {
   return (
     <section id="projects">
       <div className="project-section py-12 px-4 text-center">
-        <h2 className="text-4xl font-bold mb-8 mt-9">My<strong className="green">Projects</strong></h2>
+        <h2 className="text-4xl font-bold mb-8 mt-9">My <strong className="green"> Projects</strong></h2>
         <ProjectTag
           onClick={handleTagChange}
           name="All"

@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 1.3vw;
+    font-family: "Epilogue", sans-serif;
+  }
+  
+  html {
+    --scrollbarBG: #fff;
+    --thumbBG: rgb(63, 63, 70);
+  }
+  
+  .botbody {
+    background: #000;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    min-height: 100vh;
+  }
+  
+  .botcontent {
+    width: 20%;
+    max-width: 300px;
+    box-sizing: border-box;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    transform: translateX(100%);
+  }
+  
+  .botbody.open .botcontent {
+    transform: translateX(0);
+  }
+  
+  .card {
+    height: auto;
+    width: 100%;
+    background-color: black;
+    box-shadow: 0vw 0vw 100vw 0vw #555;
+  }
+  
+  #botheader {
+    background-color: #333;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  h1 {
+    color: #fff;
+    font-size: 1.5rem;
+  }
+  
+  .refresh {
+    cursor: pointer;
+    color: #fff;
+  }
+  
+  .message-section {
+    padding: 10px;
+    overflow-y: auto;
+    max-height: 200px;
+  }
+  
+  .message {
+    background-color: #555;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    color: #fff;
+  }
+  
+  .quickbtns {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .quickmessage {
+    cursor: pointer;
+    padding: 5px 10px;
+    margin-left: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  #input-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #333;
+  }
+  
+  #user-input {
+    flex-grow: 1;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+  
+  .sendmessage {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  
+  .chatbot-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .heart-icon,
+  .robot-icon {
+    display: none;
+  }
+  
+  .chatbot-toggle.open .heart-icon {
+    display: inline-block;
+    color: red;
+  }
+  
+  .chatbot-toggle.open .robot-icon {
+    display: inline-block;
+    margin-left: 5px;
+    color: #fff;
+  }
+  
+  /* Add styles for the heart and robot icons */
+  .heart-icon i,
+  .robot-icon i {
+    font-size: 24px;
+  }
+  
+  @media (max-width: 767px) {
+    .botcontent {
+      width: 80%;
+    }
+  }
+  

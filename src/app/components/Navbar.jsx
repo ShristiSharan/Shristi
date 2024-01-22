@@ -45,7 +45,7 @@ const Navbar = () => {
         >
           Hello_World//
         </Link>
-        <script dangerouslySetInnerHTML={{
+        {/* <script dangerouslySetInnerHTML={{
           __html: `
             window.embeddedChatbotConfig = {
               chatbotId: "FlnsjChPTCMOaqPtdVXnJ",
@@ -53,7 +53,7 @@ const Navbar = () => {
             };
           `}
         } defer></script>
-        <script src="https://www.chatbase.co/embed.min.js" chatbotId="FlnsjChPTCMOaqPtdVXnJ" domain="www.chatbase.co" defer></script>
+        <script src="https://www.chatbase.co/embed.min.js" chatbotId="FlnsjChPTCMOaqPtdVXnJ" domain="www.chatbase.co" defer></script> */}
         <div className="mobile-menu block md:hidden">
           {!navbarOpen ? (
             <button

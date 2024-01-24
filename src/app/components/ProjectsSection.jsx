@@ -41,6 +41,7 @@ const projectsData = [
     gitUrl: "https://github.com/ShristiSharan/Todo_app",
     previewUrl: "/https://dapper-haupia-791912.netlify.app/",
   },
+
   {
     id: 5,
     title: "Invoice Generator",
@@ -58,6 +59,15 @@ const projectsData = [
     tag: ["All", "Web"],
     gitUrl: "https://github.com/ShristiSharan/Responsive-Interface-for-OpenAI-s-GPT-Text-Completion-Models",
     previewUrl: "https://merlin-task.netlify.app/",
+  },
+  {
+    id: 7,
+    title: "Edulake",
+    description: "Freelancing work- EduTech website built from scratch made with React JS, Javascript, Bootstrap, Redux Toolkit.",
+    image: "/images/projects/7.png",
+    tag: ["All", "Mobile"],
+    gitUrl: "https://github.com/ShristiSharan/eduleka_static",
+    previewUrl: " ",
   },
 ];
 

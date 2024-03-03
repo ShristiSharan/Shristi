@@ -12,7 +12,6 @@ const projectsData = [
     image: "/images/projects/1.png",
     tag: ["All", "Web"],
     gitUrl: "/https://github.com/ShristiSharan/Shristi",
-    previewUrl: "/https://shristi-gamma.vercel.app/",
   },
   {
     id: 2,
@@ -21,16 +20,15 @@ const projectsData = [
     image: "/images/projects/2.jpg",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/ShristiSharan/chatbot-with-js-main",
-    previewUrl: "/",
   },
   {
     id: 3,
-    title: "E-commerce Application",
-    description: "",
+    title: "WalletTracker",
+    description: "A simple budgeting app/money tracker: Your income and expenses at your control",
     image: "/images/projects/3.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/ShristiSharan/WalletTracker",
+    
   },
   {
     id: 4,
@@ -39,7 +37,7 @@ const projectsData = [
     image: "/images/projects/4.png",
     tag: ["All", "Mobile"],
     gitUrl: "https://github.com/ShristiSharan/Todo_app",
-    previewUrl: "/https://dapper-haupia-791912.netlify.app/",
+    
   },
 
   {
@@ -49,25 +47,32 @@ const projectsData = [
     image: "/images/projects/5.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/ShristiSharan/Invoice_Generator",
-    previewUrl: "https://6461a80e69629c01bb75c797--lucent-cuchufli-ddc760.netlify.app/",
+   
   },
   {
     id: 6,
-    title: "Responsive-Interface-for-OpenAI-s-GPT-Text-Completion-Models",
-    description: "Developed a responsive UI,Merlin-using React for OpenAI's GPT text completion models. Connected an API endpoint to the search bar, implemented server-sent events (SSE) for streaming results, and styled the project with Tailwind CSS for a polished appearance.",
-    image: "/images/projects/6.png",
-    tag: ["All", "Web"],
-    gitUrl: "https://github.com/ShristiSharan/Responsive-Interface-for-OpenAI-s-GPT-Text-Completion-Models",
-    previewUrl: "https://merlin-task.netlify.app/",
-  },
-  {
-    id: 7,
     title: "Edulake",
     description: "Freelancing work- EduTech website built from scratch made with React JS, Javascript, Bootstrap, Redux Toolkit.",
     image: "/images/projects/7.png",
     tag: ["All", "Mobile"],
     gitUrl: "https://github.com/ShristiSharan/eduleka_static",
-    previewUrl: " ",
+  },
+  {
+    id: 7,
+    title: "Vibezify",
+    description: "seamless music streaming app offering 100% ad-free listening, personalized playlists, and direct playback control, rivalling Spotify’s functionality.",
+    image: "/images/projects/8.png",
+    tag: ["All", "Mobile"],
+    gitUrl: "https://github.com/ShristiSharan/eduleka_static",
+  },
+  {
+    id: 8,
+    title: "Responsive-Interface-for-OpenAI-s-GPT-Text-Completion-Models",
+    description: "Developed a responsive UI,Merlin-using React for OpenAI's GPT text completion models. Connected an API endpoint to the search bar, implemented server-sent events (SSE) for streaming results.",
+    image: "/images/projects/6.png",
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/ShristiSharan/Responsive-Interface-for-OpenAI-s-GPT-Text-Completion-Models",
+    
   },
 ];
 
@@ -124,7 +129,6 @@ const ProjectsSection = () => {
               description={project.description}
               imgUrl={project.image}
               gitUrl={project.gitUrl}
-              previewUrl={project.previewUrl}
             />
           </motion.li>
         ))}

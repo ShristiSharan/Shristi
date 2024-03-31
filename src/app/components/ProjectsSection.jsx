@@ -63,7 +63,7 @@ const projectsData = [
     description: "seamless music streaming app offering 100% ad-free listening, personalized playlists, and direct playback control, rivalling Spotify’s functionality.",
     image: "/images/projects/8.png",
     tag: ["All", "Mobile"],
-    gitUrl: "https://github.com/ShristiSharan/eduleka_static",
+    gitUrl: "https://github.com/ShristiSharan/Vibezify",
   },
   {
     id: 8,

@@ -11,7 +11,7 @@ const projectsData = [
     description: "Portfolio website with AI customchatbot",
     image: "/images/projects/1.png",
     tag: ["All", "Web"],
-    gitUrl: "/https://github.com/ShristiSharan/Shristi",
+    gitUrl: "https://github.com/ShristiSharan/Shristi",
   },
   {
     id: 2,

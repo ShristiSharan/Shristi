@@ -28,7 +28,7 @@ const ExpertiseSection = () => {
     <section id="expertise">
     <div className="experience-section py-12 px-4 text-center">
       <h2 className="text-4xl font-bold mb-8 mt-9">My <strong className="green">Expertise</strong></h2>
-      <div className="flex flex-col md:flex-row justify-center gap-8">
+      <div className="flex flex-col md:flex-row justify-left gap-8">
         {expertiseData.map((item, index) => (
           <motion.div
            key={index} 

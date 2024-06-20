@@ -3,14 +3,15 @@ import { motion } from 'framer-motion';
 
 
 const ExperienceCard = ({ company, position, timeline, description, isOpen, onClick }) => {
+  
   return (
     <motion.div
-      className={`experience-tab ${isOpen ? 'open light-yellow-bg' : ''} ${isOpen ? 'blue-bg' : 'black-text'}`}
+      className={`experience-tab ${isOpen ? 'open light-yellow-bg' : ''} `}
       onClick={onClick}
       whileHover={{ scale: 1.02 }}
     >
-      <div className={`tab-header ${isOpen ? 'active' : ''}`}>
-        <h4 className={`position ${isOpen ? 'green-text' : ''}`}>{`${position} @ ${company}`}</h4>
+      <div className={`tab-header ${isOpen ? 'active bg-yellow-200-bg' : 'black-text'}`}>
+        <h4 className={`position ${isOpen ? 'text-[#3dcc61]' : ''}`}>{`${position} @ ${company}`}</h4>
         <div className="header-info">
           <span className="timeline">{timeline}</span>
           <span className="plus-sign">{isOpen ? '-' : '+'}</span>
@@ -40,6 +41,25 @@ const Experience = () => {
   const [activeTab, setActiveTab] = useState(null);
 
   const experiences = [
+    {
+    company: 'IIT Delhi',
+    position: 'Deep Learning Research Scholar',
+    timeline: ' May 2024- June 2024',
+    description: [
+      'Developed preprocessing pipelines for PPG signal data from Berlin, transforming signals into 2D images with digital signal processing.',
+      'Implemented our Vision Transformer (ViT) model architecture, achieving accuracy of 97.70% in classifying sleep stages, surpassing global benchmarks.',
+      'Contributed to a research paper currently under review for publication in IEEE and Nature Portfolio.',
+      ],
+  },
+  {
+    company: 'GirlScript Foundation- GSSoC\'24',
+    position: 'Open Source Contributor',
+    timeline: ' May 2024- July 2024',
+    description: [
+      'Part Time Engagement in frontend development, backend enhancements, and documentation improvements across multiple projects, ensuring comprehensive project support.',
+      'Actively participated in community forums, provided mentorship to new contributors, and promoted collaboration among team members to drive project success in GSSoc\'24.',
+      ],
+  },
     {
       company: 'WhiteLabel Digital Services',
       position: 'Software Developer Intern',

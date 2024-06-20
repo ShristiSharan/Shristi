@@ -11,13 +11,13 @@ function AboutCard() {
         <blockquote className="blockquote mb-0">
           <p style={{ textAlign: "center" }}>
             Hi There, I am <span className="green">Shristi Sharan </span>
-            , third year Undergrad Student.
+            , Final year Undergrad Student.
             <br />
-            I am currently diving deep into <span className="green">Software Dvelopment</span> and <span className="green">Deep Learning & Generative AI.</span>
+            Driven deep into <span className="green">Software Dvelopment</span> and <span className="green">Deep Learning & Generative AI.</span>
             <br />
             Pursuing Electrical & Computer Science Engineering from IIIT Ahmedabad-IITRAM
             <br />
-            My goal is to acquire comprehensive knowledge, hands-on experience.
+            My goal is to acquire comprehensive knowledge, hands-on experience in order to find innovative solutions.
             <br />
             <br/>
             Apart from coding, I Love! doing :

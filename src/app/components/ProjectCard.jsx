@@ -1,27 +1,51 @@
-import React from "react";
-import { CodeBracketIcon, EyeIcon } from "@heroicons/react/24/outline";
-import Link from "next/link";
+import React, { useState } from "react";
+import { useSpring, animated } from "@react-spring/web";
+// import Link from "next/link";
 
 const ProjectCard = ({ imgUrl, title, description, gitUrl }) => {
+  const [flipped, setFlipped] = useState(false);
+
+  const { transform, opacity } = useSpring({
+    opacity: flipped ? 1 : 0,
+    transform: `rotateY(${flipped ? 180 : 0}deg)`,
+    config: { mass: 5, tension: 500, friction: 80 },
+  });
+
   return (
-    <div>
-      <div
-        className="h-52 md:h-72 rounded-t-xl relative group"
-        style={{ background: `url(${imgUrl})`, backgroundSize: "cover" }}
+    <div className="relative w-80 h-64 md:w-80 md:h-72 mx-auto"
+        onMouseEnter={() => setFlipped(true)}
+        onMouseLeave={() => setFlipped(false)}
+    >
+      {/* Front of the card */}
+      <animated.div
+        className="absolute w-full h-full rounded-none shadow-sm flex flex-col items-center justify-center"
+        style={{
+          opacity: opacity.to((o) => 1 - o),
+          transform,
+          backgroundImage: `url(${imgUrl})`,
+          backgroundSize: "cover",
+          cursor: "pointer",
+        }}
+        onClick={() => setFlipped(!flipped)}
       >
-        <div className="overlay items-center justify-center absolute top-0 left-0 w-full h-full bg-[#181818] bg-opacity-0 hidden group-hover:flex group-hover:bg-opacity-80 transition-all duration-500 ">
-          <Link
-            href={gitUrl}
-            className="h-14 w-14 mr-2 border-2 relative rounded-full border-[#ADB7BE] hover:border-white group/link"
-          >
-            <CodeBracketIcon className="h-10 w-10 text-[#ADB7BE] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  cursor-pointer group-hover/link:text-white" />
-          </Link>
+        <div className="absolute bottom-0 left-0 w-full bg-black bg-opacity-60 text-center py-2">
+          <p className="text-green-400 font-semibold text-lg">{title}</p>
         </div>
-      </div>
-      <div className="text-white rounded-b-xl mt-3 bg-[#181818]py-6 px-4">
-        <h5 className="text-xl font-semibold mb-2">{title}</h5>
-        <p className="text-[#ADB7BE]">{description}</p>
-      </div>
+        <div className="absolute bottom-0 left-0 w-full h-0.5 bg-white" />
+      </animated.div>
+
+      {/* Back of the card */}
+      <animated.div
+        className="absolute w-full h-full bg-[#181818] p-4 rounded-none text-center flex flex-col items-center justify-center border border-white"
+        style={{
+          opacity,
+          transform: transform.to((t) => `${t} rotateY(180deg)`),
+        }}
+      >
+        <h5 className="text-xl font-semibold mb-2 text-[#3dcc61]">{title}</h5>
+        <p className="text-[#adbeb1] mb-4">{description}</p>
+        <a href={gitUrl} className="text-yellow-500 underline">View Project</a>
+      </animated.div>
     </div>
   );
 };

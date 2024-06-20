@@ -147,14 +147,19 @@ body {
 .tab-header h4 {
   color: black;
   margin:0;
+  font-weight: bold;
 }
 .tab-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-weight:bold;
 }
 .description {
   margin-top: 10px;
+  background-color: rgba(245, 254, 215, 0.8); /* Initial background color */
+  padding: 20px;
+  transition: background-color 0.3s ease;
 }
 
 .description ul {
@@ -166,35 +171,6 @@ body {
   margin-bottom: 5px;
 }
 
-
-/* .experience-tabs {
-  display: flex;
-}
-
-.experience-tab {
-  cursor: pointer;
-  padding: 10px;
-  margin-right: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.experience-tab.active {
-  background-color: #f0f0f0;
-}
-
-.experience-details {
-  margin-top: 20px;
-}
-
-.experience-card {
-  border: 1px solid #ccc;
-  padding: 20px;
-  border-radius: 5px;
-} */
-
-
-
 .plus-sign {
   /* Position at right end corner */
   color: green;
@@ -202,6 +178,7 @@ body {
   font-size: 1.2em;
   margin-left: 10px;
   /* right: 10px; */
+  font-weight: bold;
 }
 
 
@@ -260,4 +237,57 @@ body {
   width: 100%;
   height: 100%;
   z-index: 0;
+}
+
+
+/* Project section */
+
+/* Custom CSS for your project cards if needed */
+.relative { position: relative; }
+.absolute { position: absolute; }
+.w-full { width: 100%; }
+.h-full { height: 100%; }
+.bg-cover { background-size: cover; }
+.bg-center { background-position: center; }
+.rounded-xl { border-radius: 1rem; }
+.text-center { text-align: center; }
+.flex { display: flex; }
+.flex-col { flex-direction: column; }
+.items-center { align-items: center; }
+.justify-center { justify-content: center; }
+.mx-auto { margin-left: auto; margin-right: auto; }
+.text-white { color: #fff; }
+.bg- { background-color: #181818; }
+.text-xl { font-size: 1.25rem; }
+.font-semibold { font-weight: 600; }
+.mb-2 { margin-bottom: 0.5rem; }
+.p-4 { padding: 1rem; }
+.p-6 { padding: 1.5rem; }
+.text-sm { font-size: 0.875rem;}
+.group { display: inline-block; }
+.group-hover\:flex:hover .group-hover\:flex { display: flex; }
+.transition-all { transition: all 0.2s; }
+.duration-500 { transition-duration: 0.5s; }
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.bg-black {
+  background-color: #000;
+}
+.text-green-500 {
+  color: #10b981;
+}
+.text-yellow-500 {
+  color: #f59e0b;
+}
+.underline {
+  text-decoration: underline;
+}
+.shadow-md {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
 }

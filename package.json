@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.0.18",
+    "@react-spring/web": "^9.7.3",
     "autoprefixer": "10.4.15",
     "bootstrap": "^5.3.2",
     "eslint": "8.47.0",

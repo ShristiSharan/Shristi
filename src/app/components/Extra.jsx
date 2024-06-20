@@ -8,7 +8,7 @@ const Extra = () => {
     <section id="extras">
       <div className="extra-section py-12 px-4 text-center">
         <h2 className="text-4xl font-bold mb-8 mt-9">
-          Extra <strong style={{ color: subtleGreen, fontWeight: 'normal' }}>\s</strong>
+          Extra <strong style={{ color: subtleGreen, fontWeight: 'normal' }}>s</strong>
         </h2>
 
         {/* Hover tab for education */}
@@ -25,13 +25,19 @@ const Extra = () => {
         <div style={{ marginBottom: '40px' }}></div>
 
         {/* Roles & Responsibilities cards */}
-          <h3 className="text-2xl font-bold mb-4">Roles & Responsibilities : </h3>
-          <div className="roles-section">
+        <h3 className="text-2xl font-bold mb-4">Roles & Recognitions</h3>
+        <div className="roles-section">
           {[
-            'Joint Technical Secretary of IITRAM.',
-            'GitHub Global Campus Student.',
             'Secured top 5k/98k rank in Google Code Jam 2023.',
             'Secured 77th position in ICPC Algo queen 2023.',
+            'Joint Technical Secretary of IITRAM.',
+            'GitHub Global Campus Student.',
+            'GSSoc\'24 Campus Ambassador',
+            'Hackalytics\'23 Data Science Hackathon Finalist',
+            'MLH-HackAPI week winner',
+            'SSIP Grante-SSIP Gujarat Government policy approved our PoC-Proof of concept/ Project Idea funded up to 2.50 Lakhs.',
+            'Unstop Igniter-IITRAM',
+            'Two publications-under review',
             'Student Coordinator- NEST Club, IITRAM.',
             'Team Lead - Coding Club, IITRAM.',
           ].map((role, index) => (

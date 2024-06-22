@@ -8,13 +8,13 @@ const Extra = () => {
     <section id="extras">
       <div className="extra-section py-12 px-4 text-center">
         <h2 className="text-4xl font-bold mb-8 mt-9">
-          Extra <strong style={{ color: subtleGreen, fontWeight: 'normal' }}>s</strong>
+          Extra <strong style={{ color: subtleGreen, fontWeight: 'normal' }}>\s</strong>
         </h2>
 
         {/* Hover tab for education */}
         <motion.div
           className="hover-tab"
-          whileHover={{ scale: 1.1, boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)', cursor: 'pointer' }}
+          whileHover={{ scale: 1.1, boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)', cursor: 'pointer', backgroundColor: '#e6ffe6' }}
         >
           <p style={{ fontWeight: '900', marginBottom: '8px' }}>Education</p>
           <p>Institute of Infrastructure Technology Research and Management</p>
@@ -44,7 +44,10 @@ const Extra = () => {
             <motion.div
               key={index}
               className="role-card"
-              whileHover={{ scale: 1.1, boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)' }}
+              whileHover={{ scale: 1.05, backgroundColor: '#f9f9f9', borderColor: '#4CAF50', color: '#4CAF50'  }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3, delay: index * 0.1 }}
             >
               <h3>{role}</h3>
             </motion.div>

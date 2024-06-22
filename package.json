@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "next lint"
   },
+  
   "dependencies": {
     "@heroicons/react": "^2.0.18",
     "@react-spring/web": "^9.7.3",

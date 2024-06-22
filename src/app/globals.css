@@ -207,12 +207,13 @@ body {
 }
 
 .hover-tab:hover {
-  background-color: #95c70b; /* Yellow highlight on hover */
+  background-color: '#e6ffe6'; 
   color:black;
 }
 
 .roles-section {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
@@ -223,11 +224,15 @@ body {
   padding: 15px;
   color:black;
   box-shadow: 0 4px 8px rgba(234, 238, 13, 0.863);
-  transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  text-align:center;
 }
 
 .role-card:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Yellow shadow highlight on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+  background-color: #f9f9f9; /* Light background on hover */
+  border-color: #4CAF50; /* Green border on hover */
+  color: #4CAF50; /* Green text on hover */
 }
 
 /* background */

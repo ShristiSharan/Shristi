@@ -42,13 +42,23 @@ const Experience = () => {
 
   const experiences = [
     {
+      company: 'PostCare.Ai',
+      position: 'FullStack Developer Intern',
+      timeline: ' June 2024 - Present',
+      description: [
+        'Developed a healthcare dashboard powered by real-time API calls, enabling seamless rendering of EHR patient data and backend controllers for robust functionality.',
+        'Architected and implemented the in-house LLM Health Bot Assistant using Llama 3, BERT, and RAG pipelines for intelligent patient interactions.',
+        'Enhanced dashboard design and responsiveness, improving API integration and boosting user engagement by 90%.'
+        ],
+    },
+    {
     company: 'IIT Delhi',
     position: 'Deep Learning Research Scholar',
-    timeline: ' May 2024- June 2024',
+    timeline: ' April 2024- June 2024',
     description: [
-      'Developed preprocessing pipelines for PPG signal data from Berlin, transforming signals into 2D images with digital signal processing.',
-      'Implemented our Vision Transformer (ViT) model architecture, achieving accuracy of 97.70% in classifying sleep stages, surpassing global benchmarks.',
-      'Contributed to a research paper currently under review for publication in IEEE and Nature Portfolio.',
+      'Developed a Vision Transformer (ViT) model for Multistage sleep classification using PPG signal, achieving a global benchmark accuracy of 97.70%.',
+      'Contributed to the development and integration of a web dashboard to showcase real-time sleep stage insights, boosting data accessibility and user engagement by 45%.',
+      'Authored research under publication in IEEE, with upcoming features in the Nature Portfolio.',
       ],
   },
   {
@@ -75,9 +85,9 @@ const Experience = () => {
         position: 'Summer Research Intern',
         timeline: ' May 2023- July 2023',
         description: [
-            'Spearheaded the development of a Self-Driving Autonomous Robot Car prototype, emphasizing both hardware and software aspects.',
-            'Implemented a machine learning architecture for autonomous navigation, integrating it into the robot’s hardware using ROS and SLAM techniques.',
-            'Enhanced the robot’s capabilities with Reinforcement Learning, NLP for voice commands, and Object Detection/Avoidance using YOLOv8 within the ROS-DARKNET framework.'
+          'Superheaded the development of SHAKTI Bot, a fully autonomous robot with 80% cost-effective hardware.',
+          'Optimized route planning using ROS, SLAM, and ML algorithms, delivering 35% better performance and 75% faster response than RL methods.',
+          'Integrated YOLOv8 and deep learning for precise segmentation enabling smooth navigation.',
             ],
       },
       {

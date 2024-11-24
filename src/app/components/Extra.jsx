@@ -37,7 +37,7 @@ const Extra = () => {
             'MLH-HackAPI week winner',
             'SSIP Grante-SSIP Gujarat Government policy approved our PoC-Proof of concept/ Project Idea funded up to 2.50 Lakhs.',
             'Unstop Igniter-IITRAM',
-            'Two publications-under review',
+            'Three authored research publications- ',
             'Student Coordinator- NEST Club, IITRAM.',
             'Team Lead - Coding Club, IITRAM.',
           ].map((role, index) => (

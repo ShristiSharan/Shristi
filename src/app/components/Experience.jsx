@@ -6,11 +6,13 @@ const ExperienceCard = ({ company, position, timeline, description, isOpen, onCl
   
   return (
     <motion.div
-      className={`experience-tab ${isOpen ? 'open light-yellow-bg' : ''} `}
+    className={`experience-tab ${
+      isOpen ? "bg-yellow-100 border-l-4 border-[#3dcc61]" : "bg-white"
+    } shadow-md rounded-lg p-4 mb-4`}
       onClick={onClick}
       whileHover={{ scale: 1.02 }}
     >
-      <div className={`tab-header ${isOpen ? 'active bg-yellow-200-bg' : 'black-text'}`}>
+      {/* <div className={`tab-header ${isOpen ? 'active bg-yellow-200-bg' : 'black-text'}`}>
         <h4 className={`position ${isOpen ? 'text-[#3dcc61]' : ''}`}>{`${position} @ ${company}`}</h4>
         <div className="header-info">
           <span className="timeline">{timeline}</span>
@@ -28,6 +30,35 @@ const ExperienceCard = ({ company, position, timeline, description, isOpen, onCl
           <ul>
             {description.map((point, index) => (
               <li key={index}>{point}</li>
+            ))}
+          </ul>
+        </motion.div>
+      )}
+    </motion.div>
+  );
+}; */}
+<div className="flex justify-between items-center cursor-pointer">
+        <h4 className={`font-semibold text-lg ${isOpen ? "text-[#236434]" : "text-gray-900"}`}>
+          {position} <span className="text-yellow-800">@ {company}</span>
+        </h4>
+        <div className="flex items-center space-x-2">
+          <span className="text-sm text-gray-500">{timeline}</span>
+          <span className="text-xl font-bold">{isOpen ? "-" : "+"}</span>
+        </div>
+      </div>
+      {isOpen && (
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 10 }}
+          transition={{ duration: 0.3 }}
+          className="mt-4 text-left"
+        >
+          <ul className="list-disc ml-6 text-gray-800 text-sm">
+            {description.map((point, index) => (
+              <li key={index} className="mb-2">
+                {point}
+              </li>
             ))}
           </ul>
         </motion.div>
@@ -110,7 +141,7 @@ const Experience = () => {
     <div className="experience-section py-12 px-4 text-center">
       <h2 className="text-4xl font-bold mb-8 mt-9">Professional <strong className="green">Experience</strong></h2>
 
-      <div className="tabs-container">
+      <div className="tabs-container max-w-3xl mx-auto">
         {experiences.map((experience, index) => (
           <ExperienceCard
             key={experience.company}

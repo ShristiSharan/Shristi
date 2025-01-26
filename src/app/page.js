@@ -11,7 +11,7 @@ import Extra from "./components/Extra";
 import SocialSection from "./components/SocialSection";
 // import CustomChatbot from './components/Chatbot/Mybot';
 // import Background from './components/Background';
-
+import Publication from "./components/Publication";
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col bg-[#121212]">
@@ -26,6 +26,7 @@ export default function Home() {
         <Expertise/>
         <ProjectsSection />
         <Experience/>
+        <Publication/>
         <Extra/>
         <EmailSection />
       </div>

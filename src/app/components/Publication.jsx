@@ -13,8 +13,8 @@ const PublicationCard = ({ publication }) => {
     >
       <div className={`absolute w-full h-full transition-transform duration-700 transform-style-3d ${isFlipped ? 'rotate-y-180' : ''}`}>
         {/* Front Side */}
-        <div className={`absolute w-full h-full backface-hidden bg-black border-coolGray-100 rounded-lg shadow-lg p-6 ${!isFlipped ? 'z-10' : 'rotate-y-180'}`}>
-          <div className="image-container w-full h-64 mb-4 overflow-hidden rounded-lg bg-white">
+        <div className={`absolute w-full h-full backface-hidden border border-gray-400/30 rounded-lg shadow-[0_0_15px_rgba(255,255,255,0.1)] p-6 ${!isFlipped ? 'z-10' : 'rotate-y-180'}`} style={{ backgroundColor: 'rgb(24 25 30)' }}>
+          <div className="image-container w-full h-64 mb-4 overflow-hidden rounded-lg bg-white border border-gray-200/50 shadow-sm">
             <img 
               src={publication.image} 
               alt={publication.title} 
@@ -29,7 +29,7 @@ const PublicationCard = ({ publication }) => {
         </div>
 
         {/* Back Side */}
-        <div className={`absolute w-full h-full backface-hidden bg-green-50 rounded-lg shadow-lg p-6 flex flex-col ${isFlipped ? 'z-10' : '-rotate-y-180'}`}>
+        <div className={`absolute w-full h-full backface-hidden bg-green-50 border border-gray-400/30 rounded-lg shadow-[0_0_15px_rgba(0,0,0,0.1)] p-6 flex flex-col ${isFlipped ? 'z-10' : '-rotate-y-180'}`}>
           <div className="flex items-center mb-4">
             <FaBook className="text-green-600 mr-3 text-2xl" />
             <h3 className="text-gray-950 font-semibold text-lg">Abstract</h3>
@@ -80,7 +80,7 @@ const PublicationSection = () => {
 
   return (
     <section id="publications" className="py-12 px-4 text-center relative z-0 mt-[80px]">
-      <div className="publication-section">
+      <div className="publication-section backdrop-blur-sm">
         <h2 className="text-4xl font-bold mb-8 mt-9">
           Publications
         </h2>

@@ -1,98 +1,119 @@
 "use client";
 import React from "react";
-import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import AnimatedBackground from "./About/Animatedbg";
+import { ArrowRight } from 'lucide-react';
 
 const HeroSection = () => {
   return (
-    <section className="lg:py-16">
-      <div className="grid grid-cols-1 sm:grid-cols-12">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-          className="col-span-8 place-self-center text-center sm:text-left justify-self-start"
-        >
-          <h1 className="text-white mb-4 text-4xl sm:text-7xl lg:text-6xl lg:leading-normal font-bold">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-yellow-300">
-              Hey, I&apos;m{" "}
-            </span>
-            <br />
-            <span
-              className="block"
-              style={{
-                display: "inline-block",
-                minWidth: "250px", // Adjust based on the longest text in TypeAnimation
-              }}
-            >
-              <TypeAnimation
-                sequence={[
-                  "Shristi Sharan",
-                  1000,
-                  "Software Developer",
-                  1000,
-                  "Open-Source Contributor",
-                  1000,
-                  "AI/ML Engineer",
-                  1000,
-                  "Techie",
-                  1000,
-                  "Developer",
-                  1000,
-                  "FullStack Developer",
-                  1000,
-                  "Frontend Developer",
-                  1000,
-                  "Backend/Cloud Developer",
-                  1000,
-                ]}
-                wrapper="span"
-                speed={50}
-                repeat={Infinity}
-              />
-            </span>
-          </h1>
-          <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-            Passionate and versatile - Full Stack Software Developer & AI/Deep
-            Learning Engineer with skills, experience and development.
-            <br />
-            Open for exciting opportunities to contribute my all-in-one
-            expertise.
-          </p>
-          <div>
-            <Link
-              href="https://www.linkedin.com/in/shristi-sharan-605543227/"
-              className="px-6 inline-block py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-green-600 to-yellow-300 hover:bg-orange-300 text-white font-bold"
-            >
-              Hire Me
-            </Link>
-            <Link
-              href="https://drive.google.com/file/d/1FSATYHIJ6C0cXQUTEZu7Ds0TSz3pAFev/view?usp=sharing"
-              className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-green-600 to-yellow-300 hover:bg-orange-300 text-white mt-3"
-            >
-              <span className="block bg-[#121212] hover:bg-slate-900 rounded-full px-5 py-2">
-                Download CV
+    <section className="relative min-h-screen w-full overflow-x-hidden max-w-full">
+      {/* Content */}
+      <div className="relative z-10 flex items-center justify-center min-h-screen">
+        <div className="container mx-auto mobile-mb-80p sm:mb-[20%]">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}dc
+            transition={{ duration: 0.8 }}
+            className="text-center"
+          >
+            <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4caf50] to-[#facc15]">
+                Hey, I&apos;m{" "}
               </span>
-            </Link>
-          </div>
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-          className="col-span-4 place-self-center mt-4 lg:mt-0"
-        >
-          <div className="rounded-full bg-[#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] overflow-hidden relative">
-            <Image
-              src="/images/av2_enhanced.png"
-              alt="hero-image"
-              className="w-full h-full object-cover rounded-full"
-              layout="fill"
-            />
-          </div>
-        </motion.div>
+              <span
+                className="block truncate sm:whitespace-normal text-2xl sm:text-3xl md:text-4xl lg:text-6xl w-full text-center"
+                style={{
+                  display: "inline-flex",
+                  minWidth: "200px",
+                  maxWidth: "100vw",
+                  overflow: "hidden",
+                  justifyContent: "center",
+                  alignItems: "center"
+                }}
+              >
+                <TypeAnimation
+                  sequence={[
+                    "Shristi Sharan",
+                    1000,
+                    "Software Developer",
+                    1000,
+                    "Web Solutions Engineer",
+                    1000,
+                    "OpenSource Contributor",
+                    1000,
+                    "AI/ML Engineer",
+                    1000,
+                    "Techie",
+                    1000,
+                    "Developer",
+                    1000,
+                    "Shristi Sharan",
+                    1000,
+                    "FullStack Developer",
+                    1000,
+                    "Frontend Developer",
+                    1000,
+                    "Backend Developer",
+                    1000,
+                    "Researcher",
+                    1000,
+                    "Problem Solver",
+                    1000,
+                  ]}
+                  wrapper="span"
+                  speed={50}
+                  repeat={Infinity}
+                  className="text-center w-full"
+                />
+              </span>
+            </h1>
+            <p className="text-white text-sm sm:text-lg mb-4 sm:mb-6 lg:text-xl drop-shadow-lg">
+              <span className="block sm:hidden">Passionate & Versatile Developer. <br /> Open to new opportunities.</span>
+              <span className="hidden sm:block">
+                Passionate and versatile - Full Stack Software Developer & AI/Deep Learning Engineer with skills, experience and development.<br />
+                Open for exciting opportunities to contribute my all-in-one expertise.
+              </span>
+            </p>
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full max-w-[8.5rem] sm:max-w-md mx-auto justify-center items-center">
+              <Link
+                href="https://www.linkedin.com/in/shristi-sharan-605543227/"
+                className="w-32 sm:w-48 px-4 py-2 sm:px-8 sm:py-4 bg-gradient-to-r from-green-600 via-green-500 to-yellow-400 
+                          hover:from-green-500 hover:to-yellow-300 text-white font-bold text-xs sm:text-lg
+                          rounded-lg shadow-lg hover:shadow-xl transition-all duration-300
+                          flex items-center justify-center mobile-btn-10rem"
+              >
+                Hire Me
+              </Link>
+              <button
+                id="lets-connect-btn"
+                onClick={() => {
+                  const emailSection = document.getElementById('contact');
+                  if (emailSection) {
+                    emailSection.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+                onMouseEnter={() => {
+                  const btn = document.getElementById('lets-connect-btn');
+                  if (btn) btn.classList.add('animate-pulse');
+                }}
+                onMouseLeave={() => {
+                  const btn = document.getElementById('lets-connect-btn');
+                  if (btn) btn.classList.remove('animate-pulse');
+                }}
+                className="w-32 sm:w-48 px-4 py-2 sm:px-8 sm:py-4 bg-[#121212] relative overflow-hidden text-white font-bold text-xs sm:text-lg rounded-lg shadow-lg border border-green-500/30 flex items-center justify-between group transition-all duration-300 hover:bg-gradient-to-r hover:from-green-600 hover:to-yellow-400 mobile-btn-10rem md-btn-14rem"
+              >
+                <span className="relative z-10 flex items-center gap-2">
+                  Let's Connect!
+                </span>
+                <span className="relative z-10 flex items-center">
+                  <ArrowRight className="text-white w-6 h-6 transition-transform duration-300 bg- group-hover:translate-x-1" />
+                </span>
+              </button>
+            </div>
+          </motion.div>
+        </div>
       </div>
     </section>
   );

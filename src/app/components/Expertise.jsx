@@ -2,87 +2,96 @@ import React from 'react';
 import { BsCodeSlash } from 'react-icons/bs';
 import { LuBrainCircuit } from "react-icons/lu";
 import { MdComputer } from "react-icons/md";
-import { FaPen } from 'react-icons/fa';
+import { FaPen, FaUserTie } from 'react-icons/fa';
 import { AiOutlineMobile } from 'react-icons/ai';
+import Tilt from 'react-parallax-tilt';
 import { motion } from 'framer-motion';
 
-const ExpertiseSection = () => {
-  const expertiseData = [
+const expertiseData = [
     {
-      icon: <BsCodeSlash />,
+      icon: <BsCodeSlash size={28} />,
       heading: 'Software Development',
-      text: 'Experienced full-stack developer proficient in Python, Java, and JS/TS, with a proven track record in frontend and backend development, cloud hosting (AWS), and comprehensive testing.',
+      text: 'Designed scalable full-stack systems- Frontend, Backend, CI/CD, Testing experience.',
     },
     {
-      icon: <LuBrainCircuit />,
+      icon: <LuBrainCircuit size={28} />,
       heading: 'AI/ML & Deep Learning',
-      text: 'Research and Work Experience in Deep Learning - Computer Vision and ML Algorithms. Working on Generative AI, LLM Models.',
+      text: 'Worked on LLMs, ViTs, and CV research. Skilled in ML pipelines, DL models, and generative AI.',
     },
     {
-      icon: <MdComputer />,
-      heading: 'Frontend Dev React, NextJS',
-      text: 'Passionate about UI/UX. Development experience in HTML, CSS, JS, React and NextJS frameworks.',
+      icon: <MdComputer size={28} />,
+      heading: 'Frontend Dev',
+      text: 'UI/UX enthusiast with React, Next.js, Three.js, HTML, and CSS expertise for responsive design.',
     },
     {
-      icon: <AiOutlineMobile />,
+      icon: <AiOutlineMobile size={28} />,
       heading: 'App Development',
-      text: 'Proficient in building cross-platform mobile apps using Flutter and React Native. Ensuring seamless user experiences.',
+      text: 'Built cross-platform apps using React Native and Swift with clean architecture and strong UX.',
     },
     {
-      icon: <FaPen />,
-      heading: 'DSA & Open Source Contributor',
-      text: 'Strong DSA skills and active Open Source contributor (GSSoC\'24, ICPC\'23,HacktoberFest\'23).',
+      icon: <FaPen size={28} />,
+      heading: 'DSA & Open Source',
+      text: 'Strong in DSA. Contributed to GSSoC, ICPC, HacktoberFest. Open-source enthusiast.',
     },
+    {
+      icon: <FaUserTie size={28} />,
+      heading: 'Leadership',
+      text: 'Led as GitHub Campus Ambassador. Managed teams and aligned tech with product strategy.',
+    }
   ];
+  
 
+const cardVariants = {
+  hidden: { opacity: 0, y: 30 },
+  show: (i) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: i * 0.2,
+      type: 'spring',
+      stiffness: 60,
+    },
+  }),
+};
+
+const ExpertiseSection = () => {
   return (
-    <section id="expertise">
-      <div className="experience-section py-12 px-4 text-center">
-        <h2 className="text-4xl font-bold mb-8 mt-9">
-          My <strong className="green">Expertise</strong>
-        </h2>
-        <div className="flex flex-col items-center">
-          <div className="flex flex-wrap justify-center gap-8">
-            {expertiseData.slice(0, 2).map((item, index) => (
-              <motion.div
-                key={index}
-                whileHover={{ scale: 1.1, boxShadow: '0 8px 16px rgba(0, 0, 0, 0.2)' }}
-                whileTap={{ scale: 0.9 }}
-                className="expertise-box bg-transparent p-6 rounded-lg shadow-md border border-gray-300 w-full md:w-[calc(50%-2rem)] lg:w-[calc(50%-2rem)]"
-              >
-                <div className="flex items-center">
-                  <div className="rounded-full bg-green-600 text-black p-3 mr-4">
-                    {item.icon}
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold mb-2">{item.heading}</h3>
-                    <p>{item.text}</p>
-                  </div>
+    <section id="expertise" className="py-20 px-6  text-white">
+      <h2 className="text-4xl font-bold text-center mb-14">
+        My <span className="text-green-400">Expertise</span>
+      </h2>
+      <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
+        {expertiseData.map((item, index) => (
+          <motion.div
+            key={index}
+            custom={index}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            variants={cardVariants}
+          >
+            <Tilt
+              glareEnable={true}
+              glareMaxOpacity={0.2}
+              scale={1.03}
+              transitionSpeed={1000}
+              tiltMaxAngleX={10}
+              tiltMaxAngleY={10}
+              className="p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-[1.02] cursor-pointer border border-gray-700"
+              style={{ background: 'rgb(22 23 25)' }}
+            >
+              <div className="flex items-start gap-4">
+                <div className="bg-green-400 p-3 rounded-full text-black shadow-md">
+                  {item.icon}
                 </div>
-              </motion.div>
-            ))}
-          </div>
-          <div className="flex flex-wrap justify-center gap-8 mt-8">
-            {expertiseData.slice(2).map((item, index) => (
-              <motion.div
-                key={index}
-                whileHover={{ scale: 1.1, boxShadow: '0 8px 16px rgba(0, 0, 0, 0.2)' }}
-                whileTap={{ scale: 0.9 }}
-                className="expertise-box bg-transparent p-6 rounded-lg shadow-md border border-gray-300 w-full md:w-[calc(33.333%-2rem)] lg:w-[calc(33.333%-2rem)]"
-              >
-                <div className="flex items-center">
-                  <div className="rounded-full bg-green-600 text-black p-3 mr-4">
-                    {item.icon}
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold mb-2">{item.heading}</h3>
-                    <p>{item.text}</p>
-                  </div>
+                <div>
+                  <h3 className="text-xl font-semibold mb-2">{item.heading}</h3>
+                  <p className="text-sm text-gray-300">{item.text}</p>
                 </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
+              </div>
+            </Tilt>
+          </motion.div>
+        ))}
       </div>
     </section>
   );

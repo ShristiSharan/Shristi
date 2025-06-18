@@ -61,9 +61,9 @@ const EmailSection = () => {
         <div className="absolute bottom-0 right-1/4 w-60 h-60 bg-gradient-to-tr from-yellow-400/20 to-green-400/10 rounded-full blur-2xl" />
       </div>
       <div className="relative z-10 w-full max-w-2xl mx-auto bg-white/10 backdrop-blur-lg rounded-2xl shadow-2xl p-8">
-        <h5 className="text-2xl font-bold text-white mb-2 text-center">Let's Connect</h5>
+        <h5 className="text-2xl font-bold text-white mb-2 text-center">Let&apos;s Connect</h5>
         <p className="text-[#ADB7BE] mb-6 max-w-md mx-auto text-center">
-          I'm currently looking for new opportunities, my inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!
+          I&apos;m currently looking for new opportunities, my inbox is always open. Whether you have a question or just want to say hi, I&apos;ll try my best to get back to you!
         </p>
         <div className="flex flex-row gap-3 justify-center mb-8">
           <Link href="https://github.com/ShristiSharan">

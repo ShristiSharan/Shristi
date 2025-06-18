@@ -69,12 +69,12 @@ const HeroSection = () => {
                 />
               </span>
             </h1>
-            <p className="text-white text-sm sm:text-lg mb-4 sm:mb-6 lg:text-xl drop-shadow-lg">
-              <span className="block sm:hidden">Passionate & Versatile Developer. <br /> Open to new opportunities.</span>
-              <span className="hidden sm:block">
-                Passionate and versatile - Full Stack Software Developer & AI/Deep Learning Engineer with skills, experience and development.<br />
-                Open for exciting opportunities to contribute my all-in-one expertise.
-              </span>
+            <p className="text-white text-base sm:text-lg mb-6 lg:text-xl drop-shadow-lg">
+              Passionate and versatile - Full Stack Software Developer & AI/Deep
+              Learning Engineer with skills, experience and development.
+              <br />
+              Open for exciting opportunities to contribute my all-in-one
+              expertise.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full max-w-[8.5rem] sm:max-w-md mx-auto justify-center items-center">
               <Link
@@ -105,7 +105,7 @@ const HeroSection = () => {
                 className="w-32 sm:w-48 px-4 py-2 sm:px-8 sm:py-4 bg-[#121212] relative overflow-hidden text-white font-bold text-xs sm:text-lg rounded-lg shadow-lg border border-green-500/30 flex items-center justify-between group transition-all duration-300 hover:bg-gradient-to-r hover:from-green-600 hover:to-yellow-400 mobile-btn-10rem md-btn-14rem"
               >
                 <span className="relative z-10 flex items-center gap-2">
-                  Let's Connect!
+                  Let&apos;s Connect!
                 </span>
                 <span className="relative z-10 flex items-center">
                   <ArrowRight className="text-white w-6 h-6 transition-transform duration-300 bg- group-hover:translate-x-1" />

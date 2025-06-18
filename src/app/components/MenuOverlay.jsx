@@ -48,7 +48,7 @@ const MenuOverlay = ({ links, closeMenu }) => {
       setCurrentMessage((prev) => (prev + 1) % welcomeMessages.length)
     }, 3000)
     return () => clearInterval(interval)
-  }, [])
+  }, [welcomeMessages.length])
 
   return (
     <div className="fixed inset-0 z-40 bg-gradient-to-br from-slate-950/40 via-midnight-900/30 to-slate-900/40 backdrop-blur-md flex justify-end md:hidden">
@@ -145,9 +145,12 @@ const MenuOverlay = ({ links, closeMenu }) => {
               </div>
             </div>
             <p className="text-sm font-medium bg-gradient-to-r from-slate-200 via-blue-200 to-slate-100 bg-clip-text text-transparent">
-              "Exploring the digital cosmos"
+              &ldquo;Exploring the digital cosmos&rdquo;
             </p>
-            <p className="text-xs text-slate-300/60 mt-1 italic">Let's create something stellar! 🌟</p>
+            <p className="text-xs text-slate-300/60 mt-1 italic">Let&apos;s create something stellar! 🌟</p>
+            <p className="text-sm text-gray-400 mt-2">
+              &ldquo;Welcome to my digital space&rdquo; - Let&apos;s explore together!
+            </p>
           </div>
 
           {/* Interactive wave effect */}

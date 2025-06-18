@@ -366,7 +366,7 @@ const Extra = () => {
       }
       raf = requestAnimationFrame(animate)
       return () => cancelAnimationFrame(raf)
-    }, [isPaused, CARD_WIDTH, CARD_GAP, SPEED])
+    }, [isPaused, CARD_WIDTH, CARD_GAP, SPEED, gradients.length])
 
     return (
       <section className="bg-[rgb(24,25,30)] text-white py-8 sm:py-12 px-2 overflow-hidden">

@@ -8,7 +8,7 @@ import { ArrowRight } from 'lucide-react';
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen w-full overflow-x-hidden max-w-full">
+    <section className="relative min-h-screen w-full overflow-x-hidden max-w-full bg-black dark:bg-inherit">
       {/* Content */}
       <div className="relative z-10 flex items-center justify-center min-h-screen">
         <div className="container mx-auto mobile-mb-80p sm:mb-[20%]">

@@ -1,50 +1,34 @@
-# Shris's Portfolio- Portfolio Website-
+# Shristi Sharan — Portfolio
 
+Software Engineer building intelligent systems at scale. **Google • AI/ML • Healthcare AI**
 
-This is a portfolio website built with Next.js and Tailwind CSS. It showcases About Me, TechStack, Expertise, Experiences and Extra's- Roles & Achievements in an elegant and responsive design {Formal yet Bright}
+Live: [shristi-gamma.vercel.app](https://shristi-gamma.vercel.app)
 
-## Installation
+Production software, applied machine learning and healthcare AI — from distributed data systems and LLM applications to biomedical research (PPG-ViT-NET sleep staging, dental image segmentation).
 
-1. Clone the repository: `git clone https://github.com/ShristiSharan/Shristi.git`
-3. Install the dependencies: `npm install`
+## Stack
 
-## Usage
+Next.js 14 (App Router, fully static) · React 18 · Tailwind CSS. No UI or animation libraries — motion is CSS plus a small canvas waveform, and it respects `prefers-reduced-motion`. Fonts (Inter, Instrument Serif, JetBrains Mono) are self-hosted from `@fontsource` via `next/font/local`, so builds need no network access.
 
-1. Start the development server: `npm run dev`
-2. Open your browser and visit `http://localhost:3000` to view the website.
+## Develop
 
+```bash
+npm install
+npm run dev     # http://localhost:3000
+npm run build   # production build
+npm run lint
+```
 
-## Overview
+## Editing content
 
-Welcome to my portfolio repository! This is where I showcase my skills, projects, and experiences. Feel free to explore and get to know more about me.
+All copy lives in [`src/app/data.js`](src/app/data.js): experience, research, healthcare highlights, skills, testimonials and links. Sections in `src/app/components/` render from it.
 
-## Expertise
+The printable resume at `/resume` renders from the same data. `public/shristi-sharan-resume.pdf` is an A4 print of that page; regenerate it after editing `data.js` (open `/resume` in Chrome → Print → Save as PDF, margins "None"), or replace it with an official resume PDF.
 
-- 🚀 Software Development
-- ⚛️ Frontend Dev (React, NextJS)
-- 🧠 AI/ML & Deep Learning
+## SEO
 
-## Contact
-
-Let's connect! Feel free to reach out:
-
-- Email: shristisharan05@gmail.com
-
-## Dependencies
-
-The following dependencies are required for this project:
-
-- Next.js: A React framework for server-side rendering and static site generation.
-- Tailwind CSS: A highly customizable CSS framework.
-- React: A JavaScript library for building user interfaces.
-- React Icons: A collection of popular icons for React projects.
-- TypeScript: A typed superset of JavaScript that compiles to plain JavaScript.
-- Resend: Resend is the email API for developers.
-
-Feel free to customize the content and replace the placeholders with your actual information. Add links, images, and details that make your portfolio stand out!
-
+Metadata, Open Graph/Twitter cards, a generated OG image (`opengraph-image.js`), `robots.txt`, `sitemap.xml` and Person JSON-LD are defined in `src/app/`.
 
 ## License
 
-This project is licensed under the [MIT License](https://opensource.org/licenses/MIT). Feel free to use, modify, and distribute the code as per the terms of the license.
-
+[MIT](LICENSE)

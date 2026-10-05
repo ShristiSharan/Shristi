@@ -3,361 +3,185 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  color-scheme: dark;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-  overflow-x: hidden;
+  @apply bg-ink text-paper font-sans antialiased;
+  text-rendering: optimizeLegibility;
 }
 
-/* Ensure content is above the animated background */
-.content-wrapper {
-  position: relative;
-  z-index: 10;
+::selection {
+  background: #c8f169;
+  color: #0a0a0b;
 }
 
-/* Smooth transitions for sections */
-section {
-  transition: background-color 0.5s ease;
-}
-
-/* About section styling */
-.about-section {
-  position: relative !important;
-  padding-bottom: 50px !important;
-  background-color: rgba(0, 0, 0, 0.8) !important;
-  color: white !important;
-}
-
-/* Tech icons styling */
-.tech-icons {
-  font-size: 4.5em !important;
-  margin: 15px !important;
-  padding: 10px !important;
-  opacity: 0.93 !important;
-  border: 1.7px solid rgb(226, 230, 16) !important;
-  vertical-align: middle !important;
-  text-align: center !important;
-  border-radius: 5px !important;
-  display: inline-flex !important;
-  box-shadow: 4px 5px 4px 3px rgb(186, 199, 10) !important;
-  overflow: hidden !important;
-  transition: all 0.4s ease 0s !important;
-  background-color: rgba(0, 0, 0, 0.8) !important;
-}
-
-@media (max-width: 768px) {
-  .tech-icons {
-    margin: 10px !important;
-    font-size: 2em;
-    padding: 12px;
-  }
-}
-
-@media (max-width: 576px) {
-  .tech-icons {
-    font-size: 1.5em;
-    margin: 6px;
-    padding: 10px;
-  }
-}
-
-:root {
-  --imp-text-color: #4CAF50;
-}
-
-.green {
-  color: var(--imp-text-color) !important;
-}
-
-.blockquote-footer {
-  color: rgb(77, 163, 6) !important;
-}
-
-.tech-icons:hover {
-  transform: scale(1.05) !important;
-  overflow: hidden !important;
-  border: 2.2px solid rgb(77, 163, 6) !important;
-}
-
-.tech-icon-images {
-  padding: 20px !important;
-  line-height: 1.6 !important;
-}
-
-.quote-card-view {
-  border: none !important;
-  color: white !important;
-  border-radius: 5px;
-  padding: 15px;
-}
-
-.about-activity {
-  list-style: none !important;
-  text-align: center !important;
-  padding-left: 1px !important;
-}
-
-@media (max-width: 767px) {
-  .about-img {
-    padding-top: 0 !important;
-  }
-}
-
-.project-heading {
-  color: white !important;
-  font-size: 2.3em !important;
-  font-weight: 500 !important;
-  padding-top: 2px !important;
-}
-
-/* Experience section */
-.experience-section {
-  padding: 20px;
-  background-color: rgba(0, 0, 0, 0.8) !important;
-}
-
-.experience-tab {
-  color: black;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  background-color: rgba(245, 254, 215, 0.8);
-  margin: 10px 0;
-  padding: 20px;
-}
-
-.light-yellow-bg {
-  background-color: rgb(231, 231, 111);
-  padding: 20px 30px;
-}
-
-.header-info {
-  display: flex;
-  align-items: center;
-}
-
-.tab-header h4 {
-  color: black;
-  margin: 0;
-  font-weight: bold;
-}
-
-.tab-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-weight: bold;
-}
-
-.description {
-  margin-top: 10px;
-  background-color: rgba(245, 254, 215, 0.8);
-  padding: 20px;
-  transition: background-color 0.3s ease;
-}
-
-.description ul {
-  list-style-type: disc;
-  padding-left: 20px;
-}
-
-.description li {
-  margin-bottom: 5px;
-}
-
-.plus-sign {
-  color: green;
-  font-size: 1.2em;
-  margin-left: 10px;
-  font-weight: bold;
-}
-
-.skills-used {
-  background-color: rgba(225, 250, 200, 0.8);
-  padding: 10px;
-  border-radius: 5px;
-}
-
-/* Extra section */
-.extra-section {
-  padding: 20px;
-  background-color: rgba(0, 0, 0, 0.8) !important;
-}
-
-.hover-tab {
-  background-color: #f0f0f0;
-  padding: 10px;
-  cursor: pointer;
-  color: black;
-  transition: background-color 0.3s ease;
-}
-
-.hover-tab:hover {
-  background-color: '#e6ffe6';
-  color: black;
-}
-
-.roles-section {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.role-card {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  margin: 10px;
-  padding: 15px;
-  color: black;
-  box-shadow: 0 4px 8px rgba(234, 238, 13, 0.863);
-  transition: box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
-  text-align: center;
-}
-
-.role-card:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  background-color: #f9f9f9;
-  border-color: #4CAF50;
-  color: #4CAF50;
-}
-
-/* Project section */
-.project-section {
-  background-color: rgba(0, 0, 0, 0.8) !important;
-  padding: 20px;
-}
-.tech-icons {
-  position: relative;
-  margin: 20px 0;
-  display: flex;
-  justify-content: center;
-}
-
-.icon-wrapper {
-  position: relative;
-  display: inline-block;
-}
-
-.icon-label {
-  position: absolute;
-  bottom: 1.8rem;
-  left: 0;
-  /* transform: translateX(-75%); */
-  background-color: #103510; /* bright green */
-  padding: 3px 10px;
+:focus-visible {
+  outline: 2px solid #c8f169;
+  outline-offset: 3px;
   border-radius: 4px;
-  font-size: 0.8rem;
-  color: #fff700; /* yellow text */
-  white-space: nowrap;
-  opacity: 0;
+}
+
+/* Film grain + faint grid give the dark canvas some texture without images. */
+.backdrop::before {
+  content: "";
+  position: fixed;
+  inset: 0;
   pointer-events: none;
-  transition: opacity 0.2s;
-  z-index: 10;
-  font-weight: 600;
+  z-index: 0;
+  background-image: linear-gradient(rgba(237, 235, 230, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(237, 235, 230, 0.025) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: radial-gradient(ellipse at 50% 0%, black 20%, transparent 75%);
 }
 
-.icon-wrapper:hover .icon-label {
+@layer components {
+  .eyebrow {
+    @apply font-mono text-[0.72rem] uppercase tracking-[0.18em] text-muted;
+  }
+
+  .chip {
+    @apply inline-flex items-center rounded-full border border-line px-2.5 py-1 font-mono text-[0.7rem] text-muted;
+  }
+
+  .link-underline {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-size: 0% 1px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.35s ease;
+  }
+  .link-underline:hover,
+  .link-underline:focus-visible {
+    background-size: 100% 1px;
+  }
+
+  .spotlight {
+    position: relative;
+    isolation: isolate;
+  }
+  .spotlight::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    background: radial-gradient(
+      420px circle at var(--mx, 50%) var(--my, 50%),
+      rgba(200, 241, 105, 0.09),
+      transparent 60%
+    );
+  }
+  .spotlight:hover::before {
+    opacity: 1;
+  }
+}
+
+.js .reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.8s cubic-bezier(0.2, 0.7, 0.2, 1), transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+  transition-delay: var(--delay, 0ms);
+}
+.js .reveal.is-visible {
   opacity: 1;
-  pointer-events: auto;
+  transform: none;
 }
 
-html, body {
-  overflow-x: hidden;
-  max-width: 100vw;
+.rise {
+  animation: rise 1s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  animation-delay: var(--delay, 0ms);
 }
 
-@media (max-width: 640px) {
-  .mobile-text-base {
-    font-size: 2rem !important;
-    line-height: 1.5rem !important;
-  }
-  .mobile-mb-80p {
-    margin-bottom: 80% !important;
-  }
-  .mobile-sequence-fit {
-    font-size: min(5vw, 1.3rem) !important;
-    line-height: 1.2 !important;
-    white-space: nowrap !important;
-    width: 100%;
-    display: block;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  .mobile-btn-10rem {
-    width: 10rem !important;
-    min-width: 10rem !important;
-    max-width: 10rem !important;
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
   }
 }
 
-@media (min-width: 641px) {
-  .md-btn-14rem {
-    width: 14rem !important;
-    min-width: 14rem !important;
-    max-width: 14rem !important;
+.pulse-dot {
+  animation: pulse-dot 2.4s ease-out infinite;
+}
+
+@keyframes pulse-dot {
+  0% {
+    box-shadow: 0 0 0 0 rgba(200, 241, 105, 0.55);
+  }
+  70%,
+  100% {
+    box-shadow: 0 0 0 9px rgba(200, 241, 105, 0);
   }
 }
 
-/* Simplified mobile styles */
-@media (max-width: 768px) {
-  .project-heading {
-    margin: 1.5rem 0 !important;
-    line-height: 1.2;
-  }
+.js .draw-path {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+}
+.js .is-visible .draw-path {
+  animation: draw 2.4s cubic-bezier(0.6, 0, 0.2, 1) forwards;
+  animation-delay: var(--delay, 0ms);
+}
 
-  .tech-icons .icon-wrapper {
-    border-radius: 0.75rem;
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: all 0.3s ease;
-  }
+.js .pop {
+  opacity: 0;
+  transform: scale(0.6);
+  transform-box: fill-box;
+  transform-origin: center;
+}
+.js .is-visible .pop {
+  animation: pop 0.6s cubic-bezier(0.2, 0.7, 0.2, 1.4) forwards;
+  animation-delay: var(--delay, 0ms);
+}
 
-  .tech-icons .icon-wrapper:hover {
-    background: rgba(255, 255, 255, 0.1);
-    transform: translateY(-2px);
-  }
-
-  .green {
-    background: linear-gradient(45deg, #00ff88, #00cc6a);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+@keyframes pop {
+  to {
+    opacity: 1;
+    transform: none;
   }
 }
 
-@media (max-width: 480px) {
-  .about-section {
-    padding: 0.5rem 0;
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
   }
+}
 
-  .project-heading {
-    font-size: 1.5rem !important;
-    margin: 1rem 0 !important;
+details > summary {
+  list-style: none;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
+details[open] .summary-arrow {
+  transform: rotate(90deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
-
-  .tech-icons {
-    margin-bottom: 0.75rem;
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
-
-  .icon-wrapper {
-    padding: 0.5rem !important;
+  .js .reveal,
+  .js .pop {
+    opacity: 1;
+    transform: none;
+  }
+  .js .draw-path {
+    stroke-dashoffset: 0;
   }
 }

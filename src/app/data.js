@@ -18,7 +18,7 @@ export const links = {
 export const highlights = [
   { value: 80, suffix: "%", label: "less time-to-insight with Gemini ADK agent workflows at Google" },
   { value: 92.74, decimals: 2, suffix: "%", label: "SNOMED CT vaccine-code mapping accuracy, Health AI" },
-  { value: 5, suffix: "-stage", label: "sleep classification from raw PPG with a Vision Transformer" },
+  { value: 97.7, decimals: 2, suffix: "%", label: "sleep-stage accuracy from raw PPG with a Vision Transformer" },
   { value: 1500, suffix: "+", label: "patient records unified over SMART on FHIR at PostCare.AI" },
 ];
 
@@ -35,7 +35,7 @@ export const featuredResearch = [
     area: "Biomedical signals",
     summary:
       "Sleep staging today relies on polysomnography — accurate, but expensive and lab-bound. PPG-ViT-NET classifies all five sleep stages from a single wrist-wearable signal: raw PPG is transformed into wavelet scalograms and read by a Vision Transformer, covering two-, three-, four- and five-stage sleep architecture.",
-    points: ["Research at IIT Delhi, Centre for Biomedical Engineering", "Wearable-ready, non-invasive alternative to PSG"],
+    points: ["97.70% sleep-stage classification accuracy", "Research at IIT Delhi, Centre for Biomedical Engineering", "Wearable-ready, non-invasive alternative to PSG"],
     tags: ["Vision Transformer", "PPG", "Wavelets", "Sleep medicine"],
     links: [{ label: "Code", href: "https://github.com/ShristiSharan/DSP_Project" }],
     visual: "signal",
@@ -158,7 +158,7 @@ export const healthcare = [
     kind: "Research",
     title: "Sleep staging from a wearable signal",
     body: "PPG-ViT-NET reads raw photoplethysmography as wavelet scalograms and classifies all five sleep stages — a path from lab polysomnography to at-home monitoring.",
-    facts: ["First author", "IEEE JBHI · under review"],
+    facts: ["97.70% accuracy", "First author · IEEE JBHI, under review"],
     href: "#research",
     cta: "Read the research",
   },

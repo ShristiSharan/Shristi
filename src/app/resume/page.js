@@ -38,7 +38,7 @@ export default function ResumePage() {
           Software engineer at Google building LLM-powered analytics and agentic tooling, BigQuery data platforms and
           RPC-based distributed services for Google Ads. Healthcare AI background spanning SMART on FHIR and
           HIPAA-compliant clinical apps, a Llama 3 RAG health assistant and genomics agents (DeepVariant). First-author
-          biomedical deep learning research on PPG-based sleep staging with Vision Transformers.
+          biomedical deep learning research on PPG-based sleep staging with Vision Transformers (97.70% accuracy).
         </p>
 
         <H>Experience</H>
@@ -73,7 +73,7 @@ export default function ResumePage() {
             <p className="shrink-0 text-neutral-500">{iitDelhi.period}</p>
           </div>
           <ul className="mt-0.5 list-disc pl-4">
-            <li>First author of PPG-ViT-NET, a Vision Transformer for two- to five-stage sleep classification from raw PPG (wavelet scalograms).</li>
+            <li>First author of PPG-ViT-NET, a Vision Transformer for two- to five-stage sleep classification from raw PPG (wavelet scalograms), reaching 97.70% accuracy.</li>
           </ul>
         </section>
         <p className="text-neutral-600">
